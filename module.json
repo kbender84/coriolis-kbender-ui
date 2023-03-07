@@ -8,8 +8,8 @@
       "name": "benderworks",
       "url": "https://www.patreon.com/benderworks/about"
     }  ],
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "10",
   "styles": [
     "./css/yzecoriolis.css"
   ],
@@ -20,9 +20,7 @@
       "path": "./lang/en.json"
     }
   ],
-  "system": [
-    "yzecoriolis"
-  ],
+  "system": [{ "id": "yzecoriolis" }],
   "url": "https://github.com/kbender84/coriolis-kbender-ui",
   "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/module.json",
   "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/coriolis-kbender-ui.zip"
