@@ -24,7 +24,7 @@
     "yzecoriolis"
   ],
   "url": "https://github.com/kbender84/coriolis-kbender-ui",
-  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/blob/latest/module.json",
+  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/module.json",
   "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/coriolis-kbender-ui.zip",
 
 }
