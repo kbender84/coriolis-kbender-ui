@@ -1,0 +1,96 @@
+<div class="tab panel" data-group="primary" data-tab="stats">
+    <ul class="attribute-list">
+        {{#each system.attributes as |ability key|}}
+        <li>
+            <div class="flexcol attr-item">
+                <div class="attr-block bg-{{key}}">
+                    <div class="attr-num-display">
+                        <input class="attr-input" type="text" name="system.attributes.{{key}}.value"
+                            value="{{ability.value}}" data-dtype="Number" placeholder="0" />
+                    </div>
+                </div>
+                <div class="attr-name">{{getAttributeName key}}</div>
+                <div class="attr-rollable  rollable" data-rolltype="attribute" data-attributekey={{key}}
+                    data-roll="(@attributes.{{key}}.value)d6" data-label="{{getAttributeRollName key}}"><img
+                        src="modules/coriolis-kbender-ui/data/images/dice.png"></div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+    <div class="skills-list-group flexrow">
+        <ol class="single-skill-list">
+            <li class="skill-header">{{getSkillCategoryName 'general'}}</li>
+            {{#each system.skills as |skill id|}}
+            {{#if_eq skill.category 'general'}}
+            <li class="skill fr-basic">
+                <div class="fr-basic rollable flex1" data-rolltype="general" data-attributekey={{skill.attribute}}
+                    data-skillkey={{id}} data-label="{{getSkillRollName id}}">
+                    <div class="skill-image"></div>
+                    <h4>{{getSkillName id}}</h4>
+                    <div class="bg-skill-{{skill.attribute}}"></div>
+                </div>
+
+                <div class="skill-value-display">
+                    <input class="skill-input" type="text" name="system.skills.{{id}}.value" value="{{skill.value}}"
+                        data-dtype="Number" />
+                </div>
+            </li>
+            {{/if_eq }}
+            {{/each}}
+        </ol>
+        <ol class="single-skill-list">
+            <li class=" skill-header">{{getSkillCategoryName 'advanced'}}</li>
+            {{#each system.skills as |skill id|}}
+            {{#if_eq skill.category 'advanced'}}
+            <li class="skill fr-basic">
+                <div class="fr-basic rollable flex1" data-rolltype="advanced" data-attributekey={{skill.attribute}}
+                    data-skillkey={{id}} data-label="{{getSkillRollName id}}">
+                    <div class="skill-image"></div>
+                    <h4>{{getSkillName id}}</h4>
+                    <div class="bg-skill-{{skill.attribute}}"></div>
+                </div>
+
+                <div class="skill-value-display">
+                    <input class="skill-input" type="text" name="system.skills.{{id}}.value" value="{{skill.value}}"
+                        data-dtype="Number" />
+                </div>
+            </li>
+            {{/if_eq }}
+            {{/each}}
+        </ol>
+    </div>
+
+    <ul class="critical-injuries-list">
+        <li class="crit-header">
+            <h4>{{localize "YZECORIOLIS.CriticalInjuries"}}</h4>
+            {{#if owner}}
+            <div class="crit-add-controls">
+                <a class="crit-control-widget item-create" title='{{localize "YZECORIOLIS.CreateCriticalInjury"}}'
+                    {{#each injuryDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
+                    <i class="fas fa-plus"></i> {{localize "YZECORIOLIS.Add"}}
+                </a>
+            </div>
+            {{/if}}
+        </li>
+        {{#each injuries as |injury id|}}
+        <li class="injury item flexrow" data-item-id="{{injury._id}}">
+            <div class="critical-injuries-bg flickering flexrow">
+                <div class="critical-injuries-name expandable-info flexrow">
+                  <span>{{injury.name}}</span>
+                  <div class="injury-description">
+                    <span>{{#if_eq injury.system.fatal true}}{{localize "YZECORIOLIS.FatalInjury"}}{{#if injury.system.timeLimit}} ({{injury.system.timeLimit}}){{/if}}!{{/if_eq}}</span>
+                  </div>
+                </div>
+                <div class="crit-controls">
+                    <a class="crit-control-widget item-edit" title="{{localize "YZECORIOLIS.EditCriticalInjury"}}"><i
+                            class="fas fa-edit"></i></a>
+                    <a class="crit-control-widget item-post" title="{{localize "YZECORIOLIS.PostCriticalInjury"}}"><i
+                            class="fas fa-comment"></i></a>
+                    <a class="crit-control-widget item-delete" title="{{localize "YZECORIOLIS.DeleteCriticalInjury"}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

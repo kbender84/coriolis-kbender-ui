@@ -1,0 +1,31 @@
+{
+  "name": "coriolis-kbender-ui",
+  "title": "UI pack for Coriolis RPG",
+  "description": "Alternate styling for Coriolis RPG",
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "benderworks",
+      "url": "https://www.patreon.com/benderworks/about"
+    }  ],
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
+  "styles": [
+    "./css/yzecoriolis.css"
+  ],
+  "languages": [
+     {
+      "lang": "en",
+      "name": "English",
+      "path": "./lang/en.json"
+    }
+  ],
+  "system": [
+    "yzecoriolis"
+  ],
+  "url": "https://github.com/kbender84/coriolis-kbender-ui",
+  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/latest/download/module.json",
+  "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/01/module.zip",
+
+}
+
