@@ -16,13 +16,6 @@
   "styles": [
     "./css/yzecoriolis.css"
   ],
-  "languages": [
-     {
-      "lang": "en",
-      "name": "English",
-      "path": "./lang/en.json"
-    }
-  ],
     "relationships": {
     "systems": [{ "id": "yzecoriolis" }]
   },
