@@ -1,10 +1,10 @@
 /*Overwriting foundry default values*/
-#pause img {
-	box-sizing: border-box;
 
-	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield.png");
-	animation: rotation 20s infinite linear;
-	
+.attribute-list .attr-rollable
+{
+    content: url('/modules/coriolis-kbender-ui/data/images/dice.png');
+    width: 50px;
+    height: 50px;
 }
 
 .chat-message,
