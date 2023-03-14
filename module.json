@@ -16,8 +16,7 @@
   },
   "esmodules": [
         "/scripts/module.js"
-    ],
-
+  ],
   "styles": [
     "./css/yzecoriolis.css"
   ],
@@ -27,8 +26,8 @@
     "systems": [{ "id": "yzecoriolis" }]
   },
   "url": "https://github.com/kbender84/coriolis-kbender-ui",
-  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/module.json",
-  "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/latest/coriolis-kbender-ui.zip"
+  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1/module.json",
+  "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1/coriolis-kbender-ui.zip"
 
 }
-
+<img class="vertical-img" src="modules/coriolis-kbender-ui/data/images/Coriolis-main.png" data-edit="system.keyArt" title="UnknowN">
