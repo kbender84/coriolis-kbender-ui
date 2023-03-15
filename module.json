@@ -16,7 +16,8 @@
   },
   "esmodules": [
         "/scripts/module.js"
-  ],
+    ],
+
   "styles": [
     "./css/yzecoriolis.css"
   ],
