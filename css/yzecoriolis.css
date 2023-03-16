@@ -18,7 +18,7 @@
 	background-size: 100%;
 	background-position: top, bottom, 0px 18px;
 	background-repeat: no-repeat;
-	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield.png");
+	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
 //url("/modules/coriolis-kbender-ui/data/images/back_top_bare.png"),
 //					  url("/modules/coriolis-kbender-ui/data/images/back_middlee.png");
 
@@ -37,7 +37,7 @@
 	background-size: 100%;
 	background-position: top, bottom, 0px 18px;
 	background-repeat: no-repeat;
-	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield.png");
+	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
 //url("/modules/coriolis-kbender-ui/data/images/back_top_bare.png"),
 //					  url("/modules/coriolis-kbender-ui/data/images/back_middlee.png");
 }
@@ -2152,7 +2152,8 @@ font-size: 30px;
   animation-fill-mode: forwards;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-bg.equipped {
-  background-color: rgba(191,155,48, 0.75);
+//  background-color: rgba(191,155,48, 0.75);
+  background-color: rgba(150, 92, 0, 0.20);
 }
 @keyframes flicker {
   0% {
