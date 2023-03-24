@@ -2,7 +2,7 @@
   "name": "coriolis-kbender-ui",
   "title": "Coriolis UI pack by kbender",
   "description": "Alternate styling for Coriolis RPG",
-  "version": "1.1",
+  "version": "1.2",
   "authors": [
     {
       "name": "benderworks",
@@ -27,7 +27,7 @@
     "systems": [{ "id": "yzecoriolis" }]
   },
   "url": "https://github.com/kbender84/coriolis-kbender-ui",
-  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1.1/module.json",
-  "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1.1/coriolis-kbender-ui.zip"
+  "manifest": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1.2/module.json",
+  "download": "https://github.com/kbender84/coriolis-kbender-ui/releases/download/1.2/coriolis-kbender-ui.zip"
 
 }
