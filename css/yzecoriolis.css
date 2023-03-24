@@ -1,4 +1,11 @@
 /*Overwriting foundry default values*/
+:root {
+  --color-border-light-tertiary: #ffbf00;
+  --color-text-dark-primary: #ffbf00;
+  --color-bg-option: #ffbf00;
+  --color-border-highlight-alt: #ffbf00;
+  --color-underline-header: white;
+}
 
 .attribute-list .attr-rollable
 {
@@ -6,6 +13,10 @@
     width: 50px;
     height: 50px;
 }
+
+
+
+
 
 .chat-message,
 .chat-message.emote {
@@ -21,8 +32,6 @@
 	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
 //url("/modules/coriolis-kbender-ui/data/images/back_top_bare.png"),
 //					  url("/modules/coriolis-kbender-ui/data/images/back_middlee.png");
-
-
     
 }
 
@@ -107,6 +116,8 @@ font-size: 30px;
 }
 .flexrow > * {
   flex: 1;
+  color: #ffa903; //dropdown
+  background: #090909;
 }
 .flexrow .flex1 {
   flex: 1;
@@ -181,6 +192,7 @@ font-size: 30px;
 .resource-label {
   font-weight: bold;
   text-transform: uppercase;
+  color: white;
 }
 .flex-center {
   align-items: center;
@@ -1389,7 +1401,7 @@ font-size: 30px;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .item-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #ff2020;
@@ -1664,7 +1676,7 @@ font-size: 30px;
 
 
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -1672,7 +1684,7 @@ font-size: 30px;
 }
 
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -1695,8 +1707,8 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill h4 {
   font-family: "Cairo";
-  color: white;
-  color: #9fb0bo;
+ // color: white;
+  color: #ffbf00;
   font-weight: bold;
   font-size: 13px;
   flex: 1;
@@ -1962,10 +1974,10 @@ font-size: 30px;
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
-  color: #9fb0bo;
+//  color: #9fb0bo;
   flex-basis: 100px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-add-widget a:hover {
@@ -2084,7 +2096,7 @@ font-size: 30px;
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -2282,7 +2294,7 @@ font-size: 30px;
   -moz-appearance: none;
   appearance: none;
   background-color: none;
-  background: url("icons/checkbox-unchecked.svg") center no-repeat;
+  background: url("icons/checkbox-unchecked.svg") center no-repeat color #ffa903;
   background-size: 21px;
   width: 22px;
   transition: background-color 275ms ease;
@@ -2293,6 +2305,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-checkbox:checked {
   background: url("icons/checkbox-checked.svg") center no-repeat;
+  background-color: #ffa903;
   background-size: 21px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block {
@@ -2663,7 +2676,7 @@ font-size: 30px;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-add-widget {
-  color: #965c00;
+  color: #ffbf00;
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -2769,6 +2782,14 @@ font-size: 30px;
 .yzecoriolis.chat-item h3 {
   text-transform: uppercase;
 }
+
+.sheet header.sheet-header h1 input {
+  height: 48px;
+  line-height: 48px;
+  margin: 0px 2% 2% 0px;
+  width: 100%;
+}
+
 .yzecoriolis.chat-item .header {
   text-align: center;
 }
@@ -2813,10 +2834,10 @@ font-size: 30px;
   align-items: center;
   justify-content: center;
   padding: 3px;
-  border: 1px solid #7a7971;
+  border: 1px solid var(--color-border-light-tertiary);
   width: 50px;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 3px;
 }
@@ -2826,8 +2847,8 @@ font-size: 30px;
 .yzecoriolis.sheet.item .feature-section .special-feature-header {
   margin: 2px 0;
   padding: 0;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+  background: rgba(9, 9, 9, 0.05);
+  border: 2px groove var(--color-bg-option);
   font-weight: bold;
   line-height: 24px;
 }
@@ -3023,7 +3044,7 @@ a.content-link, a.inline-roll{
   border: 2px solid #000;
   border-radius: 6px 0 0 0;
   bacground-color: rgba(9, 9, 9);
-  color: white;
+//  color: white;
 }
 
 .sheet.journal-entry aside.journal-sidebar.sidebar {
@@ -3044,28 +3065,130 @@ a.content-link, a.inline-roll{
   color: #ffffff;
 }
 
+
 .dice-roll .dice-formula, .dice-roll .dice-total {
   flex: 0 0 100%;
   position: relative;
   margin: 0;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
   line-height: 24px;
   text-align: center;
-  background: rgba(9, 9, 9,0.8);
+  background: rgba(9,9,9,0.8);
   border: 1px solid var(--color-border-light-2);
   border-radius: 3px;
   box-shadow: 0 0 2px #FFF inset;
   word-break: break-all;
 }
 
-
-//replace the default image with new one -- needs conditional setup to work only on default image
-/*.yzecoriolis.sheet.actor .key-art-container .vertical-img {
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 10px;
-  @when content(url("/systems/yzecoriolis/css/images/unknown_player.png")) {
-   {content: url('/modules/coriolis-kbender-ui/css/css/images/char-sheet-bg.jpg');}
-  } 
+.window-app .window-content {
+  background: rgba(255, 169, 3, 0.6);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+//  background-image: url("/modules/coriolis-kbender-ui/data/images/item_back1.png");
+  background: url("/modules/coriolis-kbender-ui/data/images/item_back1.png");
+  padding: 8 px;
+//  color: white;
+  color: #ffa903;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-*/
+
+
+.dialog .dialog-buttons button {
+  background: rgba(9, 9, 9, 0.6);
+  border: 2px groove  #ffa903;
+  margin: 0 5px 0 0;
+  margin-right: 5px;
+  color: #ffa903;
+}
+
+
+.entryContent {
+  background-image: url("");
+  background-color: rgba(9,9,9, 0.8);
+  background: rgba(9,9,9, 0.8);
+  color: #ffa903;
+//  background-repeat: repeat;
+  border-radius: var(--radius);
+  padding: 25px;
+}
+
+option, optgroup {
+  font-family: inherit;
+  color: #ffa903;
+  background: #090909;
+}
+
+.directory .directory-header .header-search input {
+  flex: 1;
+  margin: 0 3px;
+  background: rgba(9, 9, 9, 0.8);
+
+}
+
+
+form .form-group .form-fields > * {
+  flex: 1;
+  margin: 0 3px 0 0;
+  color: white;
+  background: rgba(9,9,9,0.8);
+}
+
+form button {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px groove var(--color-border-light-highlight);
+  color: #ffa903;
+}
+
+/* top bar menu*/
+.scene.gm .hover {
+  text-shadow: 0 0 8px #ffa903;
+}
+
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
+  cursor: default;
+  color: var(--color-text-light-0);
+  border: 1px solid var(#965c00);
+  background: rgba(52, 52, 52, 0.95);
+  border-bottom: 1px solid var(--color-border-highlight);
+  box-shadow: 0 0 10px var(--color-shadow-highlight);
+}
+
+#navigation #scene-list .scene.gm {
+  background: rgba(9,9,9,0.8);
+  border: 1px solid #965c00;
+}
+
+/* end of top bar menu*/
+
+/*chat collor*/
+#chat-controls .roll-type-select {
+  width: 200px;
+  height: 24px;
+  margin: 0 6px;
+  background: rgba(9, 9, 9, 0.8);
+}
+
+#chat-form textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background: rgba(9, 9, 9, 0.8);
+  color: white;
+}
+/*end of chat collor*/
+
+/*top menu buttons*/
+.directory .action-buttons button {
+  height: 28px;
+  line-height: 26px;
+  margin: 4px;
+  min-width: max-content;
+  white-space: nowrap;
+  background: rgba(9, 9, 9, 0.8);
+
+}
+/*end of top menu buttons*/
+
