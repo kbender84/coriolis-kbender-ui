@@ -5,6 +5,7 @@
   --color-bg-option: #ffbf00;
   --color-border-highlight-alt: #ffbf00;
   --color-underline-header: white;
+  --color-text-dark-secondary: #d4d4d4;
 }
 
 .attribute-list .attr-rollable
@@ -3176,6 +3177,7 @@ form button {
   height: 100%;
   resize: none;
   background: rgba(9, 9, 9, 0.8);
+  border: 1px solid var(--color-text-dark-secondary);
   color: white;
 }
 /*end of chat collor*/
@@ -3191,4 +3193,36 @@ form button {
 
 }
 /*end of top menu buttons*/
+
+/*a bit risky, but trying to solve the macro rolltable issue*/
+select {
+  height: calc(var(--form-field-height) + 1px);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+  padding: 0 3px;
+  text-overflow: ellipsis;
+  font-family: inherit;
+  font-size: inherit;
+  color:var(--color-border-light-tertiary);
+}
+
+
+/*roll table description*/
+
+form .form-group-stacked > *, form .form-group.stacked > * {
+  flex: 0 0 100%;
+  color: var(--color-text-dark-secondary);
+}
+
+/*dice tooltip*/
+.inline-roll .dice-tooltip {
+  width: 280px;
+  position: fixed;
+  background: rgba(9,9,9,0.8);
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 5px;
+  padding: 5px 5px 0;
+  box-shadow: 0 0 10px var(--color-shadow-dark);
+}
 
