@@ -6,6 +6,11 @@
   --color-border-highlight-alt: #ffbf00;
   --color-underline-header: white;
   --color-text-dark-secondary: #d4d4d4;
+  --color-coriolis-dark-gold: #965c00;
+  --color-coriolis-light-gold: #ffa903;
+  --color-coriolis-dark: #090909;
+  --color-coriolis-input: white;
+  --color-coriolis-fade: #7b7c4c;
 }
 
 .attribute-list .attr-rollable
@@ -117,8 +122,8 @@ font-size: 30px;
 }
 .flexrow > * {
   flex: 1;
-  color: #ffa903; //dropdown
-  background: #090909;
+  color: var(color-coriolis-input); /*dropdown updated from --color-coriolis-light-gold*/
+//  background: var(--color-coriolis-dark);
 }
 .flexrow .flex1 {
   flex: 1;
@@ -193,7 +198,7 @@ font-size: 30px;
 .resource-label {
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: var(--color-coriolis-light-gold);
 }
 .flex-center {
   align-items: center;
@@ -512,7 +517,7 @@ font-size: 30px;
   color: #a4a4a4;
 }
 .yzecoriolis.sheet.actor .orange-1 {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .red-1 {
   color: #8e0707;
@@ -549,24 +554,24 @@ font-size: 30px;
   color: #204f21;
 }
 .yzecoriolis.sheet.actor input[type="text"].input-base {
-  color: white;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
 }
 .yzecoriolis.sheet.actor input[type="text"].input-base::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #204f21;
+    color: var(--color-coriolis-input);/*color: #204f21;*/
 }
 .yzecoriolis.sheet.actor input[type="number"].input-base {
-  color: white;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
 }
 .yzecoriolis.sheet.actor input[type="number"].input-base::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #204f21;
+    color: var(--color-coriolis-input);/*color: #204f21;*/
 }
 .yzecoriolis.sheet.actor input[type="text"].text-base {
   font-size: 14px;
@@ -653,7 +658,7 @@ font-size: 30px;
   border-style: solid;
 }
 .yzecoriolis.sheet.actor .border-blue-1 {
-  border-color: #965c00;
+  border-color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .border-white-1 {
   border-color: white;
@@ -855,7 +860,7 @@ font-size: 30px;
   align-self: center;
 }
 .yzecoriolis.sheet.actor input[type="number"].right-aligned-number-input {
-  color: #ffbf00;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
@@ -938,10 +943,10 @@ font-size: 30px;
 }
 .journal-link a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .journal-link a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .journal-link a i {
   color: white;
@@ -966,11 +971,11 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .player-text {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .player-text-bold {
   font-family: "Cairo-Bold";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .data-text {
   font-family: "Cairo";
@@ -991,7 +996,7 @@ font-size: 30px;
   margin-bottom: 2px;
 }
 .yzecoriolis.sheet.actor .darkBlue.faded {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .hover-header-buttons {
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
@@ -1006,7 +1011,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor input[type="text"] {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-coriolis-light-gold); 
   font-family: "Play";
   box-shadow: none;
   border: none;
@@ -1014,19 +1019,21 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor input[type="text"]::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7b7c4c;
+    color: var(--color-coriolis-light-gold);/*color: #7b7c4c;*/
 }
 .yzecoriolis.sheet.actor input[type="checkbox"] {
   flex: 0 0 22px;
   width: 20px;
   height: 20px;
   margin: 3px 5px;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   appearance: textfield;
   margin: 0;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .sheet-container {
   display: grid;
@@ -1080,7 +1087,7 @@ font-size: 30px;
   text-transform: capitalize;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .number {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -1091,7 +1098,7 @@ font-size: 30px;
   font-family: "Cairo";
   color: white;
   font-size: 17px;
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   height: 18px;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .radiation-bar {
@@ -1340,7 +1347,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-header .char-class {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   font-family: "Play";
   font-size: 18px;
   grid-column-start: 1;
@@ -1385,11 +1392,11 @@ font-size: 30px;
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .item-status-icon {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
 }
 .yzecoriolis.sheet.actor .item-control-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -1402,7 +1409,7 @@ font-size: 30px;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .item-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #ff2020;
@@ -1431,7 +1438,7 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .item-entry-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
 }
@@ -1508,11 +1515,11 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a.entity-link:hover,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a.entity-link:hover i,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a i,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a i {
@@ -1620,7 +1627,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .attr-num-display {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   font-size: 48px;
   font-weight: bold;
   line-height: 60px;
@@ -1677,7 +1684,7 @@ font-size: 30px;
 
 
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -1685,7 +1692,7 @@ font-size: 30px;
 }
 
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -1695,7 +1702,7 @@ font-size: 30px;
 /* blad issue error */
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill:hover {
   filter: brightness(1.5);
-//  background: #ffa903;
+//  background: var(--color-coriolis-light-gold);
   animation: flicker 1.2s;
 }
 
@@ -1708,8 +1715,8 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill h4 {
   font-family: "Cairo";
- // color: white;
-  color: #ffbf00;
+//  color: white;
+  color: var(--color-border-light-tertiary);
   font-weight: bold;
   font-size: 13px;
   flex: 1;
@@ -1835,7 +1842,7 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .critical-injuries-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -1857,7 +1864,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .crit-controls {
   flex: 0 0 80px;
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   display: flex;
   justify-content: flex-end;
   margin-right: 5px;
@@ -1881,10 +1888,10 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .injury-display {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   font-size: 14px;
   font-weight: bold;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .injury-description {
   color: #9fb0bo;
@@ -1917,7 +1924,7 @@ font-size: 30px;
   color: white;
   font-size: 12px;
   border-radius: 3px;
-  border: 1px solid #ffa903;
+  border: 1px solid var(--color-coriolis-light-gold);
   padding: 0 5px 0 5px;
   margin-right: 10px;
 }
@@ -1959,7 +1966,7 @@ font-size: 30px;
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -1975,7 +1982,7 @@ font-size: 30px;
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 //  color: #9fb0bo;
@@ -2017,7 +2024,7 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -2081,7 +2088,7 @@ font-size: 30px;
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2097,7 +2104,7 @@ font-size: 30px;
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -2112,7 +2119,7 @@ font-size: 30px;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-restricted {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear {
@@ -2124,7 +2131,7 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   flex: 2.5 0 0;
@@ -2182,7 +2189,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-quantity-input {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-coriolis-input);
   font-size: 14px;
   box-shadow: none;
   border: none;
@@ -2191,7 +2198,7 @@ font-size: 30px;
   width: 50px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .item-toggle.equipped {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-img-container {
@@ -2283,7 +2290,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-input {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   height: 25px;
@@ -2295,8 +2302,8 @@ font-size: 30px;
   -moz-appearance: none;
   appearance: none;
   background-color: none;
-  background: url("icons/checkbox-unchecked.svg") center no-repeat color #ffa903;
-  background-size: 21px;
+  background: url("/systems/yzecoriolis/css/icons/checkbox-unchecked.svg") center no-repeat);
+  background-size: 20px;
   width: 22px;
   transition: background-color 275ms ease;
   border-radius: 3px;
@@ -2305,15 +2312,14 @@ font-size: 30px;
   background-color: #7b7c4c;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-checkbox:checked {
-  background: url("icons/checkbox-checked.svg") center no-repeat;
-  background-color: #ffa903;
-  background-size: 21px;
+  background: url("/systems/yzecoriolis/css/icons/checkbox-checked.svg") center no-repeat black;
+  background-size: 20px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block {
   transition: 275ms filter ease;
   background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
-  border: 1px solid #965c00;
+  border: 1px solid var(--color-coriolis-dark-gold);
   display: flex;
   flex-direction: column;
   flex: 0 0 49%;
@@ -2327,7 +2333,7 @@ font-size: 30px;
   font-family: "Cairo";
   color: white;
   letter-spacing: 0.2em;
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   text-transform: uppercase;
   margin-top: 8px;
 }
@@ -2336,7 +2342,7 @@ font-size: 30px;
   -moz-appearance: none;
   appearance: none;
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   font-size: 20px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   line-height: 25px;
@@ -2378,7 +2384,7 @@ font-size: 30px;
   padding-left: 35px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-control-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2400,15 +2406,15 @@ font-size: 30px;
   height: 590px;
   margin: 10px;
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .charnotes .editor-edit {
   display: block;
   width: 40px;
   text-align: center;
   background-color: rgba(30, 30, 30, 0.45);
-  color: #965c00;
-  border: 1px solid #965c00;
+  color: var(--color-coriolis-dark-gold);
+  border: 1px solid var(--color-coriolis-dark-gold);
   transition: background-color 275ms ease;
 }
 .yzecoriolis.sheet.actor .charnotes .editor-edit:hover {
@@ -2598,7 +2604,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .ship .module-panel .quantity-input {
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   font-size: 16px;
   font-weight: 700;
   box-shadow: none;
@@ -2614,7 +2620,7 @@ font-size: 30px;
   margin: 0;
 }
 .yzecoriolis.sheet.actor .ship .edit-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2664,7 +2670,7 @@ font-size: 30px;
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-widget {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2677,7 +2683,7 @@ font-size: 30px;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-add-widget {
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
   color: #9fb0bo;
@@ -2719,7 +2725,7 @@ font-size: 30px;
 .yzecoriolis.sheet.actor .feature-list .feature-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -2744,7 +2750,7 @@ font-size: 30px;
   height: 280px;
   margin: 10px;
   font-family: "Cairo";
-  color: #ffbf00;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link {
   background-color: rgba(191,155,48, 0.45)  ;
@@ -2755,10 +2761,10 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a i {
   color: white;
@@ -2769,8 +2775,8 @@ font-size: 30px;
   width: 40px;
   text-align: center;
   background-color: rgba(166,124,0, 0.45);
-  color: #965c00;
-  border: 1px solid #965c00;
+  color: var(--color-coriolis-dark-gold);
+  border: 1px solid var(--color-coriolis-dark-gold);
   transition: background-color 275ms ease;
 }
 .yzecoriolis.sheet.actor .shipnotes .editor-edit:hover {
@@ -2835,7 +2841,7 @@ font-size: 30px;
   align-items: center;
   justify-content: center;
   padding: 3px;
-  border: 1px solid var(--color-border-light-tertiary);
+  border: 1px solid var(--color-coriolis-input);/*input field updated from --color-border-light-tertiary*/
   width: 50px;
   margin-left: 0px;
   margin-right: 0px;
@@ -2968,7 +2974,7 @@ font-size: 30px;
   background-color: rgba(9, 9, 9, 0.8);
 }
 .yzecoriolis.dice-roll .criticalSuccess {
-  color: #965c00;
+  color: var(--color-coriolis-dark-gold);
   background-color: rgba(9, 9, 9, 0.8);
 
 }
@@ -3091,7 +3097,7 @@ a.content-link, a.inline-roll{
   background: url("/modules/coriolis-kbender-ui/data/images/item_back1.png");
   padding: 8 px;
 //  color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -3099,27 +3105,28 @@ a.content-link, a.inline-roll{
 
 .dialog .dialog-buttons button {
   background: rgba(9, 9, 9, 0.6);
-  border: 2px groove  #ffa903;
+  border: 2px groove  var(--color-coriolis-light-gold);
   margin: 0 5px 0 0;
   margin-right: 5px;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 
-
+/*coriolis rulebook integration*/
 .entryContent {
   background-image: url("");
   background-color: rgba(9,9,9, 0.8);
   background: rgba(9,9,9, 0.8);
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 //  background-repeat: repeat;
   border-radius: var(--radius);
   padding: 25px;
 }
 
+/*dropdown menu*/
 option, optgroup {
   font-family: inherit;
-  color: #ffa903;
-  background: #090909;
+  color: var(--color-coriolis-input);
+  background: var(--color-coriolis-dark);
 }
 
 .directory .directory-header .header-search input {
@@ -3140,18 +3147,18 @@ form .form-group .form-fields > * {
 form button {
   background: rgba(0, 0, 0, 0.1);
   border: 2px groove var(--color-border-light-highlight);
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 
 /* top bar menu*/
 .scene.gm .hover {
-  text-shadow: 0 0 8px #ffa903;
+  text-shadow: 0 0 8px var(--color-coriolis-light-gold);
 }
 
 #navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
   cursor: default;
   color: var(--color-text-light-0);
-  border: 1px solid var(#965c00);
+  border: 1px solid var(var(--color-coriolis-dark-gold));
   background: rgba(52, 52, 52, 0.95);
   border-bottom: 1px solid var(--color-border-highlight);
   box-shadow: 0 0 10px var(--color-shadow-highlight);
@@ -3159,12 +3166,12 @@ form button {
 
 #navigation #scene-list .scene.gm {
   background: rgba(9,9,9,0.8);
-  border: 1px solid #965c00;
+  border: 1px solid var(--color-coriolis-dark-gold);
 }
 
 /* end of top bar menu*/
 
-/*chat collor*/
+/*chat color*/
 #chat-controls .roll-type-select {
   width: 200px;
   height: 24px;
@@ -3178,9 +3185,9 @@ form button {
   resize: none;
   background: rgba(9, 9, 9, 0.8);
   border: 1px solid var(--color-text-dark-secondary);
-  color: white;
+  color: var(--color-coriolis-input);
 }
-/*end of chat collor*/
+/*end of chat color*/
 
 /*top menu buttons*/
 .directory .action-buttons button {
@@ -3190,7 +3197,7 @@ form button {
   min-width: max-content;
   white-space: nowrap;
   background: rgba(9, 9, 9, 0.8);
-
+  color: var(--color-text-dark-primary);
 }
 /*end of top menu buttons*/
 
@@ -3198,7 +3205,7 @@ form button {
 select {
   height: calc(var(--form-field-height) + 1px);
   background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--color-border-light-tertiary);
+  border: 1px solid var(--color-coriolis-input);
   border-radius: 3px;
   padding: 0 3px;
   text-overflow: ellipsis;
@@ -3226,3 +3233,23 @@ form .form-group-stacked > *, form .form-group.stacked > * {
   box-shadow: 0 0 10px var(--color-shadow-dark);
 }
 
+/*remove borders from input fields*/
+input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"], input[type="search"] {
+  width: calc(100% - 2px);
+  min-width: 20px;
+  height: var(--form-field-height);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  margin: 0;
+  color: var(--color-text-dark-primary);
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  line-height: inherit;
+  border: 1px solid var(--color-coriolis-input);
+  border-radius: 3px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
