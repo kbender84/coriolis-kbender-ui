@@ -3253,3 +3253,20 @@ input[type="text"], input[type="number"], input[type="password"], input[type="da
   -ms-user-select: text;
   user-select: text;
 }
+
+/*configure controlls page*/
+#keybindings .binding .key.uneditable
+{
+background: var(--color-coriolis-dark);
+}
+#keybindings .binding .key {
+  flex: none;
+  padding: 0 4px;
+  min-width: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 5px;
+  box-shadow: 1px 1px #444;
+  text-align: center;
+}
+
