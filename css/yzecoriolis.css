@@ -3113,7 +3113,7 @@ a.content-link, a.inline-roll{
 
 /*coriolis rulebook integration*/
 .entryContent {
-  background-image: url("");
+  background-image: url("") !important ;
   background-color: rgba(9,9,9, 0.8);
   background: rgba(9,9,9, 0.8);
   color: var(--color-coriolis-light-gold);
