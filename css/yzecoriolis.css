@@ -1,5 +1,7 @@
 /*Overwriting foundry default values*/
 :root {
+  --color-control-bg: #1a1000;
+  --color-hover-bg: #663f00;
   --color-border-light-tertiary: #ffbf00;
   --color-text-dark-primary: #ffbf00;
   --color-bg-option: #ffbf00;
@@ -3122,6 +3124,20 @@ a.content-link, a.inline-roll{
   padding: 25px;
 }
 
+.prosemirror menu button:hover, .prosemirror menu button.active {
+  color: var(--color-coriolis-light-gold);
+}
+.prosemirror {
+  --color-control-bg: #1a1000;
+  --color-hover-bg: #663f00;
+  --height-button: 28px;
+}
+
+.coriolis-sidebar.coriolis-sidebar a {
+  color: var(--color-coriolis-input);
+
+}
+
 /*dropdown menu*/
 option, optgroup {
   font-family: inherit;
@@ -3157,9 +3173,10 @@ form button {
 
 #navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
   cursor: default;
-  color: var(--color-text-light-0);
+  color: var(--color-control-bg) !important;
   border: 1px solid var(var(--color-coriolis-dark-gold));
-  background: rgba(52, 52, 52, 0.95);
+  background: var(--color-border-highlight-alt) !important;
+  opacity: 0.8;
   border-bottom: 1px solid var(--color-border-highlight);
   box-shadow: 0 0 10px var(--color-shadow-highlight);
 }
@@ -3167,6 +3184,13 @@ form button {
 #navigation #scene-list .scene.gm {
   background: rgba(9,9,9,0.8);
   border: 1px solid var(--color-coriolis-dark-gold);
+}
+
+#navigation #scene-list .scene {
+  float: left;
+  background: var(--color-coriolis-dark);
+  opacity: 0.8;
+  color: var(--color-text-dark-primary);
 }
 
 /* end of top bar menu*/
@@ -3197,7 +3221,7 @@ form button {
   min-width: max-content;
   white-space: nowrap;
   background: rgba(9, 9, 9, 0.8);
-  color: var(--color-text-dark-primary);
+  color: var(--color-coriolis-light-gold);
 }
 /*end of top menu buttons*/
 
