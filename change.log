@@ -1,3 +1,5 @@
 1.3.0 - update of module.json file to work properly with foundry v11
 
 1.3.1 - update of module.json file to work with new yzecoriolis 3.4.0 on the forge
+
+1.4.0 - removed the fonts dependancy and updated the journal and scene selection overhead fonts
