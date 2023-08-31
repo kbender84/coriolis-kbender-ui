@@ -3298,3 +3298,23 @@ background: var(--color-coriolis-dark);
   text-align: center;
 }
 
+//GM SCREEN integration
+.gm-screen-app .gm-screen-actions .meta-actions button {
+  background: rgba(30, 30, 30,  0.35);
+  color: var(--color-coriolis-light-gold);
+}
+
+.gm-screen-app.gm-screen-drawer.expanded .gm-screen-actions button {
+  background: rgba(30, 30, 30,  0.35);
+  color: var(--color-coriolis-light-gold);
+}
+
+.gm-screen-app.gm-screen-drawer .gm-screen-actions > * {
+  background: rgba(30, 30, 30,  0.35);
+  color: var(--color-coriolis-light-gold);
+}
+
+.gm-screen-app .gm-screen-actions button {
+  background: rgba(30, 30, 30,  0.35) !important;
+  color: var(--color-coriolis-light-gold);
+}
