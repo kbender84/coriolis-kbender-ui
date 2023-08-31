@@ -1,6 +1,73 @@
+/*Overwriting foundry default values*/
+:root {
+  --color-control-bg: #1a1000;
+  --color-hover-bg: #663f00;
+  --color-border-light-tertiary: #ffbf00;
+  --color-text-dark-primary: #ffbf00;
+  --color-bg-option: #ffbf00;
+  --color-border-highlight-alt: #ffbf00;
+  --color-underline-header: white;
+  --color-text-dark-secondary: #d4d4d4;
+  --color-coriolis-dark-gold: #965c00;
+  --color-coriolis-light-gold: #ffa903;
+  --color-coriolis-dark: #090909;
+  --color-coriolis-input: white;
+  --color-coriolis-fade: #7b7c4c;
+}
+
+.attribute-list .attr-rollable
+{
+    content: url('/modules/coriolis-kbender-ui/data/images/dice.png');
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+.chat-message,
+.chat-message.emote {
+	
+	padding: 0px 15px 50px 11px;
+	border-width: 0px !important;
+	color: white;
+	box-shadow: 0 1px 5px #000;
+	background-color: black;
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat;
+	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
+//url("/modules/coriolis-kbender-ui/data/images/back_top_bare.png"),
+//					  url("/modules/coriolis-kbender-ui/data/images/back_middlee.png");
+    
+}
+
+.chat-message.whisper {	
+	color: white;	
+	
+	padding: 0px 15px 50px 11px;
+	border-width: 0px !important;
+	
+	box-shadow: 0 1px 5px #000;
+	background-color: black;
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat;
+	background-image: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
+//url("/modules/coriolis-kbender-ui/data/images/back_top_bare.png"),
+//					  url("/modules/coriolis-kbender-ui/data/images/back_middlee.png");
+}
+
+.chat-message .message-header {
+  color: white;
+font-size: 30px;
+}
+
 /* ----------------------------------------- */
 /*  Fonts                                    */
 /* ----------------------------------------- */
+
 @font-face {
   font-family: "Nodesto";
   src: url("fonts/NodestoCapsCondensed.otf");
@@ -15,22 +82,22 @@
 /* ----------------------------------------- */
 /*  Sheet V2 Styles                          */
 /* ----------------------------------------- */
-@font-face {
-  font-family: "Cairo";
-  src: url("fonts/cairo/Cairo-Regular.ttf");
-}
-@font-face {
-  font-family: "Cairo-Bold";
-  src: url("fonts/cairo/Cairo-Bold.ttf");
-}
-@font-face {
-  font-family: "Cairo-SemiBold";
-  src: url("fonts/cairo/Cairo-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Play";
-  src: url("fonts/play/Play-Regular.ttf");
-}
+//@font-face {
+//  font-family: "Cairo";
+//  src: url("/Data/systems/yzecoriolis/css/fonts/cairo/Cairo-Regular.ttf");
+//}
+//@font-face {
+//  font-family: "Cairo-Bold";
+//  src: url("fonts/cairo/Cairo-Bold.ttf");
+//}
+//@font-face {
+//  font-family: "Cairo-SemiBold";
+//  src: url("fonts/cairo/Cairo-SemiBold.ttf");
+//}
+//@font-face {
+//  font-family: "Play";
+//  src: url("fonts/play/Play-Regular.ttf");
+//}
 .animated-hover {
   transition: 275ms filter ease;
 }
@@ -57,6 +124,8 @@
 }
 .flexrow > * {
   flex: 1;
+  color: var(color-coriolis-input); /*dropdown updated from --color-coriolis-light-gold*/
+//  background: var(--color-coriolis-dark);
 }
 .flexrow .flex1 {
   flex: 1;
@@ -131,6 +200,7 @@
 .resource-label {
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--color-coriolis-light-gold);
 }
 .flex-center {
   align-items: center;
@@ -419,25 +489,25 @@
   background-color: rgba(0, 0, 0, 0.35);
 }
 .yzecoriolis.sheet.actor .blue-1 {
-  color: #7182be;
+  color: #966c00;
 }
 .yzecoriolis.sheet.actor .blue-2 {
-  color: rgba(19, 27, 53, 0.45);
+  color: rgba(30, 30, 30, 0.45);
 }
 .yzecoriolis.sheet.actor .blue-3 {
-  color: rgba(113, 130, 190, 0.35);
+  color: rgba(113, 130, 130, 0.35);
 }
 .yzecoriolis.sheet.actor .blue-4 {
-  color: #71c0ec;
+  color: #71c0c0;
 }
 .yzecoriolis.sheet.actor .blue-5 {
-  color: rgba(113, 130, 190, 0.44);
+  color: rgba(113, 130, 130, 0.44);
 }
 .yzecoriolis.sheet.actor .blue-6 {
-  color: #9fb0ed;
+  color: #9fb0b0;
 }
 .yzecoriolis.sheet.actor .blue-7 {
-  color: rgba(19, 27, 53, 0.78);
+  color: rgba(19, 27, 27, 0.78);
 }
 .yzecoriolis.sheet.actor .white-1 {
   color: white;
@@ -449,61 +519,61 @@
   color: #a4a4a4;
 }
 .yzecoriolis.sheet.actor .orange-1 {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .red-1 {
   color: #8e0707;
 }
 .yzecoriolis.sheet.actor .background-blue-1 {
-  background-color: #7182be;
+  background-color: #966c00;
 }
 .yzecoriolis.sheet.actor .background-blue-2 {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(19, 27, 27, 0.45);
 }
 .yzecoriolis.sheet.actor .background-blue-3 {
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(113, 130, 130, 0.35);
 }
 .yzecoriolis.sheet.actor .background-blue-4 {
   background-color: #71c0ec;
 }
 .yzecoriolis.sheet.actor .background-blue-5 {
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(113, 130, 130, 0.44);
 }
 .yzecoriolis.sheet.actor .background-blue-7 {
-  background-color: rgba(19, 27, 53, 0.78);
+  background-color: rgba(19, 27, 27, 0.78);
 }
 .yzecoriolis.sheet.actor .background-red-1 {
   background-color: #8e0707;
 }
 .yzecoriolis.sheet.actor .input-base {
-  color: #fdff9d;
+  color: #395e33;
   font-family: "Play";
   box-shadow: none;
   border: none;
 }
 .yzecoriolis.sheet.actor .input-base::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7b7c4c;
+  color: #204f21;
 }
 .yzecoriolis.sheet.actor input[type="text"].input-base {
-  color: #fdff9d;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
 }
 .yzecoriolis.sheet.actor input[type="text"].input-base::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7b7c4c;
+    color: var(--color-coriolis-input);/*color: #204f21;*/
 }
 .yzecoriolis.sheet.actor input[type="number"].input-base {
-  color: #fdff9d;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
 }
 .yzecoriolis.sheet.actor input[type="number"].input-base::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7b7c4c;
+    color: var(--color-coriolis-input);/*color: #204f21;*/
 }
 .yzecoriolis.sheet.actor input[type="text"].text-base {
   font-size: 14px;
@@ -590,7 +660,7 @@
   border-style: solid;
 }
 .yzecoriolis.sheet.actor .border-blue-1 {
-  border-color: #7182be;
+  border-color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .border-white-1 {
   border-color: white;
@@ -779,7 +849,7 @@
   overflow: hidden;
 }
 .yzecoriolis.sheet.actor .basic-panel {
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(30, 40, 30, 0.35);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -792,7 +862,7 @@
   align-self: center;
 }
 .yzecoriolis.sheet.actor input[type="number"].right-aligned-number-input {
-  color: #fdff9d;
+  color: var(--color-coriolis-input);
   font-family: "Play";
   box-shadow: none;
   border: none;
@@ -812,7 +882,7 @@
 }
 .yzecoriolis.sheet.actor .nav-item-link {
   font-family: "Cairo-Bold";
-  color: #9fb0ed;
+  color: #9fb0b0;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 19px;
@@ -860,10 +930,10 @@
     */
 }
 .yzecoriolis.sheet.actor.character .window-content {
-  background: linear-gradient(90deg, #000000 30.35%, rgba(0, 0, 0, 0) 100%), url("images/char-sheet-bg.jpg");
+  background: linear-gradient(90deg, #000000 30.35%, rgba(0, 0, 0, 0) 100%), url("/modules/coriolis-kbender-ui/data/images/char-sheet-bg.jpg");
 }
 .yzecoriolis.sheet.actor.ship .window-content {
-  background: url("images/ship-sheet-bg.jpg");
+  background: url("/modules/coriolis-kbender-ui/data/images/char-sheet-bg.jpg");
   background-size: cover;
 }
 .journal-link a.entity-link {
@@ -875,10 +945,10 @@
 }
 .journal-link a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .journal-link a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .journal-link a i {
   color: white;
@@ -903,11 +973,11 @@
 }
 .yzecoriolis.sheet.actor .player-text {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .player-text-bold {
   font-family: "Cairo-Bold";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .data-text {
   font-family: "Cairo";
@@ -922,13 +992,13 @@
   color: white;
 }
 .yzecoriolis.sheet.actor .line-item-entry {
-  background: rgba(19, 27, 53, 0.45);
+  background: rgba(191,155,48, 0.45);
   border-radius: 3px;
   padding: 2px;
   margin-bottom: 2px;
 }
 .yzecoriolis.sheet.actor .darkBlue.faded {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .hover-header-buttons {
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
@@ -943,7 +1013,7 @@
 }
 .yzecoriolis.sheet.actor input[type="text"] {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-coriolis-light-gold); 
   font-family: "Play";
   box-shadow: none;
   border: none;
@@ -951,19 +1021,21 @@
 }
 .yzecoriolis.sheet.actor input[type="text"]::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7b7c4c;
+    color: var(--color-coriolis-light-gold);/*color: #7b7c4c;*/
 }
 .yzecoriolis.sheet.actor input[type="checkbox"] {
   flex: 0 0 22px;
   width: 20px;
   height: 20px;
   margin: 3px 5px;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   appearance: textfield;
   margin: 0;
+  color: var(--color-coriolis-dark-gold);
 }
 .yzecoriolis.sheet.actor .sheet-container {
   display: grid;
@@ -1017,7 +1089,7 @@
   text-transform: capitalize;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .number {
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -1028,7 +1100,7 @@
   font-family: "Cairo";
   color: white;
   font-size: 17px;
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   height: 18px;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .radiation-bar {
@@ -1058,10 +1130,10 @@
   background-color: #44482c !important;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .radiation-bar .hover-to-increase {
-  border: 1px solid #b1c343;
+  border: 1px solid #a67c00;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .radiation-bar .bar-segment.on {
-  background-color: #b1c343;
+  background-color: #a67c00;
 }
 .yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .radiation-bar .bar-segment.on:hover {
   transform: scale(1.05);
@@ -1117,7 +1189,7 @@
   padding: 0px 5px 0px 5px;
   border: 1px solid #a4a4a4;
   border-radius: 5px;
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(30, 30, 30,  0.35);
   height: 27px;
   justify-content: space-between;
   align-items: center;
@@ -1158,7 +1230,7 @@
   padding: 0px 5px 0px 5px;
   border: 1px solid #a4a4a4;
   border-radius: 5px;
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(30, 30, 30,  0.35);
   height: 27px;
   justify-content: space-between;
   align-items: center;
@@ -1199,7 +1271,7 @@
   padding: 0px 5px 0px 5px;
   border: 1px solid #a4a4a4;
   border-radius: 5px;
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(30, 30, 30,  0.35);
   height: 27px;
   justify-content: space-between;
   align-items: center;
@@ -1263,7 +1335,7 @@
   grid-row-gap: 2px;
 }
 .yzecoriolis.sheet.actor .sheet-header hr {
-  border: 0.5px solid #9fb0ed;
+  border: 0.5px solid #bf9b30;
 }
 .yzecoriolis.sheet.actor .sheet-header .name-plate {
   font-style: normal;
@@ -1277,14 +1349,14 @@
 }
 .yzecoriolis.sheet.actor .sheet-header .char-class {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   font-family: "Play";
   font-size: 18px;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  border-top: 0.5px solid #9fb0ed;
+  border-top: 0.5px solid #9fb0b0;
   text-align: center;
   padding-top: 10px;
 }
@@ -1322,11 +1394,11 @@
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .item-status-icon {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
 }
 .yzecoriolis.sheet.actor .item-control-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -1339,10 +1411,10 @@
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .item-control-add-widget {
-  color: #7182be;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
-  color: #9fb0ed;
+  color: #ff2020;
   flex-basis: 100px;
 }
 .yzecoriolis.sheet.actor .item-control-add-widget a:hover {
@@ -1368,12 +1440,12 @@
 .yzecoriolis.sheet.actor .item-entry-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
 }
 .yzecoriolis.sheet.actor .item-bg {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1381,10 +1453,10 @@
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.45);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.45);
+    background-color: rgba(30, 30, 30, 0.45);
   }
 }
 .yzecoriolis.sheet.actor .item-bg:hover {
@@ -1399,7 +1471,7 @@
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .item-summary-wrapper {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   flex: 0 0 570px;
   padding-left: 15px;
@@ -1412,7 +1484,7 @@
   grid-row-start: 2;
   grid-row-end: 3;
   border-radius: 5px;
-  background-color: rgba(113, 130, 190, 0.35);
+  background-color: rgba(30, 30, 30,  0.35);
   display: flex;
   flex-direction: column;
   /*-------------------------------------*/
@@ -1436,7 +1508,7 @@
 }
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a.entity-link,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a.entity-link {
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   border: 0px;
   border-radius: 3px;
   padding: 1px 6px;
@@ -1445,11 +1517,11 @@
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a.entity-link:hover,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a.entity-link:hover i,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .item-summary-wrapper a i,
 .yzecoriolis.sheet.actor .sheet-body .charnotes a i {
@@ -1463,7 +1535,7 @@
   border-radius: 5px 5px 0px 0px;
   height: 24px;
   border: none;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   justify-content: space-between;
 }
 .yzecoriolis.sheet.actor .sheet-body .navigation .item.active {
@@ -1474,7 +1546,7 @@
   font-family: "Cairo-Bold";
   color: white;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
-  color: #9fb0ed;
+  color: #ffcf40;
   transition: text-shadow 275ms ease;
   text-transform: uppercase;
   font-size: 18px;
@@ -1516,41 +1588,48 @@
   filter: brightness(1.5);
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .attr-block {
-  border: 3px solid #9fb0ed;
+  border: 3px solid #ffcf40;
   box-sizing: border-box;
   border-radius: 3px;
-  background-color: rgba(19, 27, 53, 0.25);
+  background-color: rgba(191,155,48, 0.25);
   flex-basis: 70px;
   height: 70px;
   width: 116px;
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .bg-wits {
   background-repeat: no-repeat;
-  background-image: url("icons/icon-wits-bg.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/wits.png");
   background-position: center center;
   background-clip: padding-box;
+  background-size: contain;
+
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .bg-strength {
   background-repeat: no-repeat;
-  background-image: url("icons/icon-strength-bg.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/strenght.png");
   background-position: center center;
   background-clip: padding-box;
+  background-size: contain;
+
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .bg-empathy {
   background-repeat: no-repeat;
-  background-image: url("icons/icon-empathy-bg.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/empathy.png");
   background-position: center center;
   background-clip: padding-box;
+  background-size: contain;
+
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .bg-agility {
   background-repeat: no-repeat;
-  background-image: url("icons/icon-agility-bg.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/agility.png");
   background-position: center center;
   background-clip: padding-box;
+  background-size: contain;
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .attr-num-display {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   font-size: 48px;
   font-weight: bold;
   line-height: 60px;
@@ -1568,7 +1647,7 @@
   font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #9fb0ed;
+  color: #9fb0bo;
 }
 .yzecoriolis.sheet.actor .sheet-body .attribute-list .attr-rollable img {
   border: none;
@@ -1596,27 +1675,50 @@
 }
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill {
   transition: 275ms filter ease;
-  background: rgba(19, 27, 53, 0.45);
+  background: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   padding: 2px;
   margin-bottom: 2px;
   align-items: center;
   height: 30px;
 }
+
+
+
+.yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
+  color: var(--color-border-light-tertiary);
+  flex-basis: 20px;
+  transition: color, transform 275ms ease, text-shadow 275ms ease;
+  color: #9fb0bo;
+  flex-basis: 100px;
+}
+
+.yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill-control-add-widget {
+  color: var(--color-border-light-tertiary);
+  flex-basis: 20px;
+  transition: color, transform 275ms ease, text-shadow 275ms ease;
+  color: #9fb0bo;
+  flex-basis: 100px;
+}
+
+/* blad issue error */
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill:hover {
   filter: brightness(1.5);
+//  background: var(--color-coriolis-light-gold);
+  animation: flicker 1.2s;
 }
+
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill .rollable:hover {
   text-shadow: 0 0 5px #ff4500;
 }
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill .rollable:hover .skill-image {
-  background-image: url("icons/rolling-dices.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/dice.png");
   background-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .skills-list-group .skill h4 {
   font-family: "Cairo";
-  color: white;
-  color: #9fb0ed;
+//  color: white;
+  color: var(--color-border-light-tertiary);
   font-weight: bold;
   font-size: 13px;
   flex: 1;
@@ -1644,7 +1746,7 @@
   background-size: 25px;
   flex-basis: 80px;
   background-repeat: no-repeat;
-  background-image: url("icons/skill-tag-wits.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/wits.png");
   background-position: center center;
   background-clip: padding-box;
 }
@@ -1654,7 +1756,7 @@
   background-size: 25px;
   flex-basis: 80px;
   background-repeat: no-repeat;
-  background-image: url("icons/skill-tag-strength.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/strenght.png");
   background-position: center center;
   background-clip: padding-box;
   background-size: 20px;
@@ -1665,7 +1767,7 @@
   background-size: 25px;
   flex-basis: 80px;
   background-repeat: no-repeat;
-  background-image: url("icons/skill-tag-empathy.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/empathy.png");
   background-position: center center;
   background-clip: padding-box;
 }
@@ -1675,7 +1777,7 @@
   background-size: 25px;
   flex-basis: 80px;
   background-repeat: no-repeat;
-  background-image: url("icons/skill-tag-agility.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/agility.png");
   background-position: center center;
   background-clip: padding-box;
 }
@@ -1702,7 +1804,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-radius: 3px;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   margin-bottom: 5px;
   height: 24px;
   padding-left: 5px;
@@ -1721,7 +1823,7 @@
   color: white;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .critical-injuries-bg {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1729,10 +1831,10 @@
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.45);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.45);
+    background-color: rgba(30, 30, 30, 0.45);
   }
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .critical-injuries-bg:hover {
@@ -1742,7 +1844,7 @@
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .critical-injuries-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -1760,11 +1862,11 @@
   text-align: center;
   text-transform: uppercase;
   padding-right: 2px;
-  color: #9fb0ed;
+  color: #9fb0bo;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .crit-controls {
   flex: 0 0 80px;
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   display: flex;
   justify-content: flex-end;
   margin-right: 5px;
@@ -1788,13 +1890,13 @@
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .injury-display {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   font-size: 14px;
   font-weight: bold;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .injury-description {
-  color: #9fb0ed;
+  color: #9fb0bo;
   flex: 0 0 400px;
   width: 400px;
 }
@@ -1824,7 +1926,7 @@
   color: white;
   font-size: 12px;
   border-radius: 3px;
-  border: 1px solid #9fb0ed;
+  border: 1px solid var(--color-coriolis-light-gold);
   padding: 0 5px 0 5px;
   margin-right: 10px;
 }
@@ -1841,7 +1943,7 @@
   font-family: "Cairo";
   color: white;
   border-radius: 3px;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   height: 24px;
   margin-bottom: 5px;
   align-content: center;
@@ -1866,7 +1968,7 @@
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -1882,10 +1984,10 @@
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-add-widget {
-  color: #7182be;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
-  color: #9fb0ed;
+//  color: #9fb0bo;
   flex-basis: 100px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-control-add-widget a:hover {
@@ -1903,7 +2005,7 @@
   margin-bottom: 2px;
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-bg {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1911,10 +2013,10 @@
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.45);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.45);
+    background-color: rgba(30, 30, 30, 0.45);
   }
 }
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-bg:hover {
@@ -1924,7 +2026,7 @@
 .yzecoriolis.sheet.actor .sheet-body .talent-list .talent-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -1957,7 +2059,7 @@
   font-family: "Cairo";
   color: white;
   border-radius: 3px;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   height: 24px;
   margin-bottom: 5px;
   align-content: center;
@@ -1988,7 +2090,7 @@
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2004,10 +2106,10 @@
   padding-left: 15px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-add-widget {
-  color: #7182be;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
-  color: #9fb0ed;
+  color: #9fb0bo;
   flex-basis: 100px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-control-add-widget a:hover {
@@ -2019,7 +2121,7 @@
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-restricted {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear {
@@ -2031,7 +2133,7 @@
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   flex: 2.5 0 0;
@@ -2050,7 +2152,7 @@
   text-align: center;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-bg {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -2061,10 +2163,10 @@
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.45);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.45);
+    background-color: rgba(30, 30, 30, 0.45);
   }
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-bg:hover {
@@ -2072,14 +2174,15 @@
   animation-fill-mode: forwards;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-bg.equipped {
-  background-color: rgba(19, 27, 53, 0.75);
+//  background-color: rgba(191,155,48, 0.75);
+  background-color: rgba(150, 92, 0, 0.20);
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.75);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.75);
+    background-color: rgba(30, 30, 30, 0.45);
   }
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-bg.equipped:hover {
@@ -2088,7 +2191,7 @@
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-quantity-input {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-coriolis-input);
   font-size: 14px;
   box-shadow: none;
   border: none;
@@ -2097,7 +2200,7 @@
   width: 50px;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .item-toggle.equipped {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-img-container {
@@ -2116,7 +2219,7 @@
   transition: background-image 275ms ease, transform 275ms ease;
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-img-container.rollable:hover {
-  background-image: url("icons/rolling-dices-orange.svg") !important;
+  background-image: url("/modules/coriolis-kbender-ui/data/images/dice.png") !important;
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .sheet-body .gear-list .gear-img {
@@ -2125,7 +2228,7 @@
   border: none;
 }
 .yzecoriolis.sheet.actor .sheet-body .encumbrance-bar {
-  background-color: rgba(19, 27, 53, 0.85);
+  background-color: rgba(191,155,48, 0.85);
   border-radius: 5px;
   margin-left: 15px;
   margin-right: 15px;
@@ -2167,7 +2270,7 @@
   font-family: "Cairo";
   color: white;
   border-radius: 3px;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   height: 24px;
   margin-bottom: 5px;
   align-content: center;
@@ -2189,7 +2292,7 @@
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-input {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   height: 25px;
@@ -2201,8 +2304,8 @@
   -moz-appearance: none;
   appearance: none;
   background-color: none;
-  background: url("icons/checkbox-unchecked.svg") center no-repeat;
-  background-size: 21px;
+  background: url("/systems/yzecoriolis/css/icons/checkbox-unchecked.svg") center no-repeat);
+  background-size: 20px;
   width: 22px;
   transition: background-color 275ms ease;
   border-radius: 3px;
@@ -2211,14 +2314,14 @@
   background-color: #7b7c4c;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-checkbox:checked {
-  background: url("icons/checkbox-checked.svg") center no-repeat;
-  background-size: 21px;
+  background: url("/systems/yzecoriolis/css/icons/checkbox-checked.svg") center no-repeat black;
+  background-size: 20px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block {
   transition: 275ms filter ease;
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.45);
   border-radius: 3px;
-  border: 1px solid #7182be;
+  border: 1px solid var(--color-coriolis-dark-gold);
   display: flex;
   flex-direction: column;
   flex: 0 0 49%;
@@ -2232,7 +2335,7 @@
   font-family: "Cairo";
   color: white;
   letter-spacing: 0.2em;
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   text-transform: uppercase;
   margin-top: 8px;
 }
@@ -2241,7 +2344,7 @@
   -moz-appearance: none;
   appearance: none;
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   font-size: 20px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   line-height: 25px;
@@ -2249,14 +2352,14 @@
   height: 25px;
   padding: 0px 35px 0px 10px;
   border: none;
-  background: url("icons/drop-down-arrow.svg") 6.4% no-repeat rgba(113, 130, 190, 0.44);
+  background: url("icons/drop-down-arrow.svg") 6.4% no-repeat rgba(191,155,48, 0.45)  ;
   background-position: right 0.7em top 50%;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block select:focus {
   box-shadow: none;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block select option {
-  background-color: rgba(19, 27, 53, 0.78);
+  background-color: rgba(191,155,48, 0.78);
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-block-list {
   justify-content: space-between;
@@ -2283,7 +2386,7 @@
   padding-left: 35px;
 }
 .yzecoriolis.sheet.actor .sheet-body .bio-stats .bio-control-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2305,15 +2408,15 @@
   height: 590px;
   margin: 10px;
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .charnotes .editor-edit {
   display: block;
   width: 40px;
   text-align: center;
-  background-color: rgba(19, 27, 53, 0.45);
-  color: #7182be;
-  border: 1px solid #7182be;
+  background-color: rgba(30, 30, 30, 0.45);
+  color: var(--color-coriolis-dark-gold);
+  border: 1px solid var(--color-coriolis-dark-gold);
   transition: background-color 275ms ease;
 }
 .yzecoriolis.sheet.actor .charnotes .editor-edit:hover {
@@ -2428,14 +2531,14 @@
 }
 .yzecoriolis.sheet.actor .ship .crew-card .crew-roll-number-hover {
   transform: translateY(-3px) scale(1.1);
-  color: #041126;
+  color: #261a04;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .yzecoriolis.sheet.actor .ship .crew-card .roll-glow {
   position: relative;
   top: -20px;
   background-repeat: no-repeat;
-  background-image: url("icons/roll-glow.svg");
+  background-image: url("/modules/coriolis-kbender-ui/data/images/glow1.png");
   background-position: center center;
   background-size: contain;
   transform: scale(2.5);
@@ -2495,15 +2598,15 @@
   background-color: #bf0909;
 }
 .yzecoriolis.sheet.actor .ship .module-panel .toggle-ship-module-button.enabled {
-  background-color: #b1c343;
+  background-color: #a67c00;
   color: #081f43;
 }
 .yzecoriolis.sheet.actor .ship .module-panel .toggle-ship-module-button.enabled:hover {
-  background-color: #c1cf6a;
+  background-color: #ffcf40;
 }
 .yzecoriolis.sheet.actor .ship .module-panel .quantity-input {
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
   font-size: 16px;
   font-weight: 700;
   box-shadow: none;
@@ -2519,7 +2622,7 @@
   margin: 0;
 }
 .yzecoriolis.sheet.actor .ship .edit-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2544,7 +2647,7 @@
   font-family: "Cairo";
   color: white;
   border-radius: 3px;
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   height: 24px;
   margin-bottom: 5px;
   align-content: center;
@@ -2569,7 +2672,7 @@
   justify-content: flex-end;
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-widget {
-  color: #7182be;
+  color: var(--color-coriolis-dark-gold);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
 }
@@ -2582,10 +2685,10 @@
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-add-widget {
-  color: #7182be;
+  color: var(--color-border-light-tertiary);
   flex-basis: 20px;
   transition: color 275ms ease, transform 275ms ease, text-shadow 275ms ease;
-  color: #9fb0ed;
+  color: #9fb0bo;
   flex-basis: 100px;
 }
 .yzecoriolis.sheet.actor .feature-list .feature-control-add-widget a:hover {
@@ -2603,7 +2706,7 @@
   margin-bottom: 2px;
 }
 .yzecoriolis.sheet.actor .feature-list .feature-bg {
-  background-color: rgba(19, 27, 53, 0.45);
+  background-color: rgba(30, 30, 30, 0.44);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -2611,10 +2714,10 @@
 }
 @keyframes flicker {
   0% {
-    background-color: rgba(59, 84, 166, 0.45);
+    background-color: rgba(150, 92, 0, 0.45);
   }
   100% {
-    background-color: rgba(19, 27, 53, 0.45);
+    background-color: rgba(30, 30, 30, 0.44);
   }
 }
 .yzecoriolis.sheet.actor .feature-list .feature-bg:hover {
@@ -2624,7 +2727,7 @@
 .yzecoriolis.sheet.actor .feature-list .feature-name {
   font-family: "Cairo-SemiBold";
   color: white;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
   font-size: 15px;
   cursor: pointer;
   transition: transform 275ms ease;
@@ -2649,10 +2752,10 @@
   height: 280px;
   margin: 10px;
   font-family: "Cairo";
-  color: #fdff9d;
+  color: var(--color-border-light-tertiary);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link {
-  background-color: rgba(113, 130, 190, 0.44);
+  background-color: rgba(191,155,48, 0.45)  ;
   border: 0px;
   border-radius: 3px;
   padding: 1px 6px;
@@ -2660,10 +2763,10 @@
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link:hover {
   text-shadow: none;
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a.entity-link:hover i {
-  color: #ffa903;
+  color: var(--color-coriolis-light-gold);
 }
 .yzecoriolis.sheet.actor .shipnotes .editor a i {
   color: white;
@@ -2673,9 +2776,9 @@
   display: block;
   width: 40px;
   text-align: center;
-  background-color: rgba(19, 27, 53, 0.45);
-  color: #7182be;
-  border: 1px solid #7182be;
+  background-color: rgba(166,124,0, 0.45);
+  color: var(--color-coriolis-dark-gold);
+  border: 1px solid var(--color-coriolis-dark-gold);
   transition: background-color 275ms ease;
 }
 .yzecoriolis.sheet.actor .shipnotes .editor-edit:hover {
@@ -2688,6 +2791,14 @@
 .yzecoriolis.chat-item h3 {
   text-transform: uppercase;
 }
+
+.sheet header.sheet-header h1 input {
+  height: 48px;
+  line-height: 48px;
+  margin: 0px 2% 2% 0px;
+  width: 100%;
+}
+
 .yzecoriolis.chat-item .header {
   text-align: center;
 }
@@ -2732,10 +2843,10 @@
   align-items: center;
   justify-content: center;
   padding: 3px;
-  border: 1px solid #7a7971;
+  border: 1px solid var(--color-coriolis-input);/*input field updated from --color-border-light-tertiary*/
   width: 50px;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 3px;
 }
@@ -2745,8 +2856,8 @@
 .yzecoriolis.sheet.item .feature-section .special-feature-header {
   margin: 2px 0;
   padding: 0;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+  background: rgba(9, 9, 9, 0.05);
+  border: 2px groove var(--color-bg-option);
   font-weight: bold;
   line-height: 24px;
 }
@@ -2800,7 +2911,7 @@
   height: 100%;
 }
 .yzecoriolis.sheet.item .tox .tox-editor-container {
-  background: #fff;
+  background: #7a7971;/*zmiana*/
 }
 .yzecoriolis.sheet.item .tox .tox-edit-area {
   padding: 0 8px;
@@ -2850,7 +2961,7 @@
   flex: 0 0 86px;
   text-align: right;
 }
-.yzecoriolis.dice-roll .coriolis-results .dice-rolls {
+.yzecoriolis.-roll .coriolis-results .dice-rolls {
   list-style: none;
   padding: 0;
   overflow: hidden;
@@ -2858,15 +2969,21 @@
 .yzecoriolis.dice-roll .coriolis-results .dice-rolls .roll {
   line-height: 24px;
   float: left;
+  background-color: rgba(9, 9, 9, 0.8);
 }
 .yzecoriolis.dice-roll .limitedSuccess {
-  color: green;
+  color: #bf9b30;
+  background-color: rgba(9, 9, 9, 0.8);
 }
 .yzecoriolis.dice-roll .criticalSuccess {
-  color: greenyellow;
+  color: var(--color-coriolis-dark-gold);
+  background-color: rgba(9, 9, 9, 0.8);
+
 }
 .yzecoriolis.dice-roll .criticalfailure {
   color: red;
+  background-color: rgba(9, 9, 9, 0.8);
+
 }
 .yzecoriolis.dice-roll .dice-face {
   width: 50px;
@@ -2877,62 +2994,307 @@
   color: white;
 }
 .yzecoriolis.dice-roll .dice-1 {
-  background-image: url("images/dice-1.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-1.png") !important;
 }
 .yzecoriolis.dice-roll .dice-2 {
-  background-image: url("images/dice-2.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-2.png") !important;
 }
 .yzecoriolis.dice-roll .dice-3 {
-  background-image: url("images/dice-3.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-3.png") !important;
 }
 .yzecoriolis.dice-roll .dice-4 {
-  background-image: url("images/dice-4.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-4.png") !important;
 }
 .yzecoriolis.dice-roll .dice-5 {
-  background-image: url("images/dice-5.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-5.png") !important;
 }
 .yzecoriolis.dice-roll .dice-6 {
-  background-image: url("images/dice-6.png") !important;
+  background-image: url("/modules/coriolis-kbender-ui/css/css/images/dice-6.png") !important;
 }
 .yzecoriolis.dice-push {
   flex: 0 0 22px;
   font-size: 12px;
   text-align: center;
-  color: #7a7971;
+  font-weight: bold;
+  color: #white;
+  background-color: rgba(9, 9, 9, 0.8);
 }
 .yzecoriolis.dice-push a {
-  color: #44191a;
+  color: white;
+  background-color: rgba(9, 9, 9, 0.8);
 }
 .yzecoriolis.darknesspoint-tool {
   background-image: url("icons/darkness-point-add.svg");
   width: 50px;
   height: 50px;
 }
-.yzecoriolis.darkness-point-display {
-  background: linear-gradient(90deg, #000000 30.35%, rgba(0, 0, 0, 0) 100%), url("images/char-sheet-bg.jpg");
-  margin: -8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+
+tbody tr{
+  background-color: rgba(9, 9, 9, 0.8);
+  color: #fff;
 }
-.yzecoriolis.darkness-point-display .count {
-  color: #fdff9d;
-  font-family: "Play";
-  font-size: 70px;
+
+tbody tr:nth-child(even){
+  background-color: rgba(9, 9, 9,0.8);
+  color: #fff;
+}
+
+
+
+a.content-link, a.inline-roll{
+	background-color:rgba(9, 9, 9, 0.8);
+	color:white;}
+
+
+.sheet.journal-entry .journal-entry-content {
+  flex: 1;
+  height: 100%;
+  background: url("/modules/coriolis-kbender-ui/data/images/journal-background.png") no-repeat;
+  border: 2px solid #000;
+  border-radius: 6px 0 0 0;
+  bacground-color: rgba(9, 9, 9);
+//  color: white;
+}
+
+.sheet.journal-entry aside.journal-sidebar.sidebar {
+  background-image: linear-gradient(to right, rgb(0 0 0 / 0%), rgb(0 0 0)), url("/modules/coriolis-kbender-ui/css/css/images/char-sheet-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  opacity: 0.8;
+}
+
+.journal-sheet .journal-header .title {
+  margin: 0;
+  background: rgba(9, 9, 9,0.8);
+  font-size: var(--font-size-32);
+  height: 50px;
+  line-height: 50px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: FoundryGridnik-Medium;
+}
+
+
+.dice-roll .dice-formula, .dice-roll .dice-total {
+  flex: 0 0 100%;
+  position: relative;
+  margin: 0;
+  margin-bottom: 0px;
+  line-height: 24px;
+  text-align: center;
+  background: rgba(9,9,9,0.8);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+  box-shadow: 0 0 2px #FFF inset;
+  word-break: break-all;
+}
+
+.window-app .window-content {
+  background: rgba(255, 169, 3, 0.6);
+//  flex is causing problems with GM screen module, commenting out next 4 lines 1.4
+//  display: flex;
+//  flex-direction: column;
+//  flex-wrap: nowrap;
+//  justify-content: flex-start;
+//  background-image: url("/modules/coriolis-kbender-ui/data/images/item_back1.png");
+  background: url("/modules/coriolis-kbender-ui/data/images/item_back1.png");
+  padding: 8 px;
+//  color: white;
+  color: var(--color-coriolis-light-gold);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.dialog .dialog-buttons button {
+  background: rgba(9, 9, 9, 0.6);
+  border: 2px groove  var(--color-coriolis-light-gold);
+  margin: 0 5px 0 0;
+  margin-right: 5px;
+  color: var(--color-coriolis-light-gold);
+}
+
+/*coriolis rulebook integration*/
+.entryContent {
+  background-image: url("") !important ;
+  background-color: rgba(9,9,9, 0.8);
+  background: rgba(9,9,9, 0.8);
+  color: var(--color-coriolis-light-gold);
+//  background-repeat: repeat;
+  border-radius: var(--radius);
+  padding: 25px;
+}
+
+.prosemirror menu button:hover, .prosemirror menu button.active {
+  color: var(--color-coriolis-light-gold);
+}
+.prosemirror {
+  --color-control-bg: #1a1000;
+  --color-hover-bg: #663f00;
+  --height-button: 28px;
+}
+
+.coriolis-sidebar.coriolis-sidebar a {
+  color: var(--color-coriolis-input);
+
+}
+
+/*dropdown menu*/
+option, optgroup {
+  font-family: inherit;
+  color: var(--color-coriolis-input);
+  background: var(--color-coriolis-dark);
+}
+
+.directory .directory-header .header-search input {
+  flex: 1;
+  margin: 0 3px;
+  background: rgba(9, 9, 9, 0.8);
+
+}
+
+
+form .form-group .form-fields > * {
+  flex: 1;
+  margin: 0 3px 0 0;
+  color: white;
+  background: rgba(9,9,9,0.8);
+}
+
+form button {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px groove var(--color-border-light-highlight);
+  color: var(--color-coriolis-light-gold);
+}
+
+/* top bar menu*/
+.scene.gm .hover {
+  text-shadow: 0 0 8px var(--color-coriolis-light-gold);
+}
+
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
+  cursor: default;
+  color: var(--color-control-bg) !important;
+  border: 1px solid var(var(--color-coriolis-dark-gold));
+  background: var(--color-border-highlight-alt) !important;
+  opacity: 0.8;
+  border-bottom: 1px solid var(--color-border-highlight);
+  box-shadow: 0 0 10px var(--color-shadow-highlight);
+
+}
+
+#navigation #scene-list .scene.gm {
+  background: rgba(9,9,9,0.8);
+  border: 1px solid var(--color-coriolis-dark-gold);
+}
+
+#navigation #scene-list .scene {
+  float: left;
+  background: var(--color-coriolis-dark);
+  opacity: 0.8;
+  color: var(--color-text-dark-primary);
+  font-family: FoundryGridnik-Medium;
+}
+
+/* end of top bar menu*/
+
+/*chat color*/
+#chat-controls .roll-type-select {
+  width: 200px;
+  height: 24px;
+  margin: 0 6px;
+  background: rgba(9, 9, 9, 0.8);
+}
+
+#chat-form textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background: rgba(9, 9, 9, 0.8);
+  border: 1px solid var(--color-text-dark-secondary);
+  color: var(--color-coriolis-input);
+}
+/*end of chat color*/
+
+/*top menu buttons*/
+.directory .action-buttons button {
+  height: 28px;
+  line-height: 26px;
+  margin: 4px;
+  min-width: max-content;
+  white-space: nowrap;
+  background: rgba(9, 9, 9, 0.8);
+  color: var(--color-coriolis-light-gold);
+}
+/*end of top menu buttons*/
+
+/*a bit risky, but trying to solve the macro rolltable issue*/
+select {
+  height: calc(var(--form-field-height) + 1px);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-coriolis-input);
+  border-radius: 3px;
+  padding: 0 3px;
+  text-overflow: ellipsis;
+  font-family: inherit;
+  font-size: inherit;
+  color:var(--color-border-light-tertiary);
+}
+
+
+/*roll table description*/
+
+form .form-group-stacked > *, form .form-group.stacked > * {
+  flex: 0 0 100%;
+  color: var(--color-text-dark-secondary);
+}
+
+/*dice tooltip*/
+.inline-roll .dice-tooltip {
+  width: 280px;
+  position: fixed;
+  background: rgba(9,9,9,0.8);
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 5px;
+  padding: 5px 5px 0;
+  box-shadow: 0 0 10px var(--color-shadow-dark);
+}
+
+/*remove borders from input fields*/
+input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"], input[type="search"] {
+  width: calc(100% - 2px);
+  min-width: 20px;
+  height: var(--form-field-height);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  margin: 0;
+  color: var(--color-text-dark-primary);
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  line-height: inherit;
+  border: 1px solid var(--color-coriolis-input);
+  border-radius: 3px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/*configure controlls page*/
+#keybindings .binding .key.uneditable
+{
+background: var(--color-coriolis-dark);
+}
+#keybindings .binding .key {
+  flex: none;
+  padding: 0 4px;
+  min-width: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 5px;
+  box-shadow: 1px 1px #444;
   text-align: center;
 }
-.yzecoriolis.darkness-point-display button {
-  width: 40px;
-  height: 40px;
-  color: #fdff9d;
-  font-family: "Play";
-  font-size: 40px;
-  font-weight: bolder;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: 1px solid #9fb0ed;
-  border-radius: 50%;
-  cursor: pointer;
-  overflow: hidden;
-}
+
