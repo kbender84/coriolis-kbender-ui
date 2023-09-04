@@ -3,3 +3,7 @@
 1.3.1 - update of module.json file to work with new yzecoriolis 3.4.0 on the forge
 
 1.4.0 - removed the fonts dependancy and updated the journal and scene selection overhead fonts
+
+1.4.1 - control json file fix
+
+1.4.2 - reverted to old header fonts due lack of some regional characters

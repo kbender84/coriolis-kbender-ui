@@ -3072,7 +3072,7 @@ a.content-link, a.inline-roll{
   line-height: 50px;
   border-radius: 4px;
   color: #ffffff;
-  font-family: FoundryGridnik-Medium;
+  font-family: Play;
 }
 
 
@@ -3194,7 +3194,7 @@ form button {
   background: var(--color-coriolis-dark);
   opacity: 0.8;
   color: var(--color-text-dark-primary);
-  font-family: FoundryGridnik-Medium;
+  font-family: Play;
 }
 
 /* end of top bar menu*/
