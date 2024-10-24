@@ -22,9 +22,30 @@
     height: 50px;
 }
 
+.theme-light .application {
+  --background: url("/modules/coriolis-kbender-ui/data/images/coriolis-shield-dark.png");
+  --color-text-primary: var(--color-text-dark-primary);
+  --color-header-background: var(--color-control-bg);
+  --color-fieldset-border: var(--color-text-dark-primary);
+  --color-form-label: var(--color-coriolis-dark-gold);
+  --color-form-label-hover: var(--color-coriolis-dark-gold);
+  --color-form-hint: var(--color-coriolis-dark-gold);
+  --color-form-hint-hover: var(--color-coriolis-dark-gold);
+  --color-select-option-bg: var(--color-bg-optio);
+background-color: black;
+}
 
+.theme-light button {
+--button-text-color: var(--color-coriolis-dark-gold);
+}
 
+.application input[type="text"]{
+color: white;
+}
 
+body.game .window-app {
+--color-form-label: var(--color-coriolis-dark-gold));
+}
 
 .chat-message,
 .chat-message.emote {

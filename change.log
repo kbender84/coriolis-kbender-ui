@@ -7,3 +7,7 @@
 1.4.1 - control json file fix
 
 1.4.2 - reverted to old header fonts due lack of some regional characters
+
+1.4.3 - updated config for v12
+
+1.4.4 - Fixed missing ui for User Configuration
