@@ -11,3 +11,7 @@
 1.4.3 - updated config for v12
 
 1.4.4 - Fixed missing ui for User Configuration
+
+1.4.5 - One item in user config was displaying worng color - fixed
+
+1.4.6 - crittical injury display on character sheet fixed

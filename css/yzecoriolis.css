@@ -33,6 +33,7 @@
   --color-form-hint-hover: var(--color-coriolis-dark-gold);
   --color-select-option-bg: var(--color-bg-optio);
 background-color: black;
+--color-text-dark-secondary: var(--color-coriolis-dark-gold);
 }
 
 .theme-light button {
@@ -1840,7 +1841,7 @@ font-size: 30px;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .injury {
   align-items: center;
-  height: 26px;
+  height: auto;
   color: white;
 }
 .yzecoriolis.sheet.actor .sheet-body .critical-injuries-list .critical-injuries-bg {
@@ -3139,8 +3140,8 @@ a.content-link, a.inline-roll{
 /*coriolis rulebook integration*/
 .entryContent {
   background-image: url("") !important ;
-  background-color: rgba(9,9,9, 0.8);
-  background: rgba(9,9,9, 0.8);
+  background-color: rgba(9,9,9, 0.8) important ;
+  background: rgba(9,9,9, 0.8) important ;
   color: var(--color-coriolis-light-gold);
 //  background-repeat: repeat;
   border-radius: var(--radius);
