@@ -176,7 +176,7 @@ Hooks.once('ready', async () => {
   document.documentElement.style.setProperty('--image-coriolis-checkbox', ` url("icons/checkbox-unchecked.svg")`);
   document.documentElement.style.setProperty('--image-coriolis-header', ` url("icons/back-gold-header.webp")`);
   document.documentElement.style.setProperty('--image-coriolis-background', ` url("icons/background_saadaal.webp")`);
-  document.documentElement.style.setProperty('--image-coriolis-journal-sidebar', `url("icons/background_header.webp")`);
+  document.documentElement.style.setProperty('--image-coriolis-journal-sidebar', `url("icons/background_saadaal.webp")`);
   document.documentElement.style.setProperty('--image-coriolis-default-background', ` url("icons/background_saadaal.webp")`);
   document.documentElement.style.setProperty('--image-chat-message', ` url("icons/background_saadaal.webp")`);
   document.documentElement.style.setProperty('--image-coriolis-background-char', ` url("icons/background_saadaal.webp")`);
@@ -269,8 +269,8 @@ Hooks.once('ready', async () => {
 
     //Mirran green
 	 if (game.settings.get('coriolis-kbender-ui', 'UIVersion')=='green') {
-  document.documentElement.style.setProperty('--color-coriolis-header1', ' rgba(8, 19, 9, 0.7)');
-  document.documentElement.style.setProperty('--color-coriolis-header2', ' rgba(8, 19, 9, 0.5)');
+  document.documentElement.style.setProperty('--color-coriolis-header1', ' rgba(8, 19, 9, 0.9)');
+  document.documentElement.style.setProperty('--color-coriolis-header2', ' rgba(8, 19, 9, 0.7)');
   document.documentElement.style.setProperty('--color-coriolis-background1', ' rgba(8, 19, 9,0.3)');
   document.documentElement.style.setProperty('--color-coriolis-background2', ' rgba(8, 19, 9,0.0)');
   document.documentElement.style.setProperty('--color-coriolis-text', ' #1a533cff');
@@ -328,7 +328,7 @@ Hooks.once('ready', async () => {
   document.documentElement.style.setProperty('--color-coriolis-gray2', '  rgba(8, 19, 9,0.8)'); // used for ship boarders
   document.documentElement.style.setProperty('--color-coriolis-placeholder', ' #1a533cff');
   document.documentElement.style.setProperty('--color-coriolis-orange1', ' #69b385ff');  //critical injuries, items, talents
-  document.documentElement.style.setProperty('--color-coriolis-yellow1', ' #3e705cff'); //CHARACTER NAME ETC
+  document.documentElement.style.setProperty('--color-coriolis-yellow1', ' rgb(241 255 249 / 90%)'); //CHARACTER NAME ETC
   document.documentElement.style.setProperty('--color-coriolis-black', ' black');
   document.documentElement.style.setProperty('--color-coriolis-flicker', ' rgba(27, 85, 58, 0.5)');
   document.documentElement.style.setProperty('--color-coriolis-gear-equiped-blue-hoover', ' rgba(8, 19, 9,0.8)');
@@ -457,7 +457,7 @@ Hooks.once('ready', async () => {
   document.documentElement.style.setProperty('--color-coriolis-gray2',' #a4a4a4');
   document.documentElement.style.setProperty('--color-coriolis-placeholder',' #7b7c4c');
   document.documentElement.style.setProperty('--color-coriolis-orange1','#ffa903');
-  document.documentElement.style.setProperty('--color-coriolis-yellow1',' #fdff9d');
+  document.documentElement.style.setProperty('--color-coriolis-yellow1',' rgb(237 255 245 / 90%)');
   document.documentElement.style.setProperty('--color-coriolis-black',' black');
   document.documentElement.style.setProperty('--color-coriolis-flicker',' rgba(59, 84, 166, 0.45)');
   document.documentElement.style.setProperty('--color-coriolis-gear-equiped-blue-hoover','  rgba(19, 27, 53, 0.75)');

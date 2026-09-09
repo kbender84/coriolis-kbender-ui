@@ -18,4 +18,8 @@
 
 1.4.7 - updated config for v13
 
-2.0.0 beta of 4.0 yzecoriolis compatybile version, introduction of alternative styles 
+2.0.0 beta of 4.0 yzecoriolis compatybile version, introduction of alternative styles \
+
+2.0.1 changed small isues from ticket https://github.com/kbender84/coriolis-kbender-ui/issues/6
+
+2.0.2 visibilty teaks for the fonts
